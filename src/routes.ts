@@ -1,13 +1,13 @@
 import { Router } from 'express';
 
 // Exporting controllers
-import { AuthController } from './controllers/authController';
+import { UserController } from './controllers/UserController';
 
 // Instantiating controllers
-const authController = new AuthController();
+const userController = new UserController();
 
 const routes = Router();
 
-routes.get('/register', authController.register);
+routes.post('/register', userController.register);
 
 export { routes };

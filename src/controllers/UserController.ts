@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { User } from '../models/User';
 
-export class AuthController {
+export class UserController {
   async register(req: Request, res: Response) {
     try {
       const user = await User.create(req.body);
